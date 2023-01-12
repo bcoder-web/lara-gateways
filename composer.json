@@ -1,0 +1,20 @@
+{
+    "name": "betacoders/gateway",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Betacoders\\Gateway\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sajol Mahmud",
+            "email": "sajolmahmud010@gmail.com"
+        }
+    ],
+    "require": {
+        "stripe/stripe-php": "^10.3.0",
+        "paypal/rest-api-sdk-php":"*"
+    }
+}
