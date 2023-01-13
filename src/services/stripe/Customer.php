@@ -22,7 +22,8 @@ class Customer extends Stripe
      * @param array $data
      * @return array|mixed|string
      */
-    public function create(array $data){
+    public function create(array $data): mixed
+    {
         try {
             $customerData = [];
             if ($data['address']){
@@ -57,7 +58,8 @@ class Customer extends Stripe
      * @param string $id
      * @return array|mixed|string
      */
-    public function retrive(string $id){
+    public function retrive(string $id): mixed
+    {
         try {
             $customer = $this->stripe->customers->retrieve($id);
             return $customer->jsonSerialize();
@@ -70,7 +72,8 @@ class Customer extends Stripe
      * @param string $id
      * @return array|mixed|string
      */
-    public function delete(string $id){
+    public function delete(string $id): mixed
+    {
         try {
             $customer = $this->stripe->customers->delete($id);
             return $customer->jsonSerialize();
